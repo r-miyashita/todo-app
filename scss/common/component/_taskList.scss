@@ -1,0 +1,60 @@
+.taskList {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    &__item {
+        align-items: center;
+        background: #fff;
+        border-radius: 0.4rem;
+        border: 1px solid rgba(0,0,0,0.4);
+        box-shadow: 1px 1px 0px 1px rgba(0, 0, 0, 0.3);
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 0.5rem;
+        min-height: 60px;
+        min-width: 600px;
+        padding: 0.75rem;
+        & * {
+            color: #4e4e4e;
+        }
+        &.done {
+            opacity: 0.5;
+            text-decoration: line-through;
+            text-decoration-color: rgb(0, 82, 73);
+        }
+        &.deleted {
+            display: none;
+        }
+        &:hover {
+            background: #f2faff;
+        }
+    }
+    &__button {
+        width: 10%;
+    }
+    &__title {
+        font-family: 'Sawarabi Gothic', serif;
+        font-size: 1rem;
+        overflow: hidden;
+        max-width: 420px;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+    &__info {
+        display: flex;
+        flex-direction: column;
+        line-height: 1.25rem;
+        padding-inline: 0.5rem;
+        width: 80%;
+        &.done {
+            text-decoration: line-through;
+        }
+    }
+    &__time {
+        font-size: 0.85rem;
+        opacity: 0.8;
+    }
+    &__detail {
+        font-size: 0.85rem;
+    }
+}

@@ -1,0 +1,9 @@
+@mixin ttl {
+    color: black;
+    font-size: 3rem;
+    font-weight: 800;
+}
+
+.ttl {
+    @include ttl;
+}

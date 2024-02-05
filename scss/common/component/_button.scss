@@ -1,0 +1,42 @@
+.button {
+    position: relative;
+    opacity: 0.1;
+    &:hover {
+        opacity: 1;
+    }
+    &.search {
+        background-color: rgb(255, 153, 58);
+        color: black;
+        opacity: 1;
+    }
+    &.check.checked {
+        opacity: 1;
+        & ~ .button {
+            pointer-events: none;
+        }
+    }
+    &.check::before {
+        background: url('../../../src/assets/icons/hexagon-check.svg') no-repeat;
+    }
+    
+    &.detail::before {
+        background: url('../../../src/assets/icons/detail.svg') no-repeat;
+    }
+    &.trash::before {
+        background: url('../../../src/assets/icons/trash.svg') no-repeat;
+    }
+    &.trash:hover::before {
+        background: url('../../../src/assets/icons/trash-hov.svg') no-repeat;
+    }
+    &::before {
+        background-size: contain;
+        content: '';
+        display: inline-block;
+        height: 1.5rem;
+        left: 50%;
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 1.5rem;
+    }
+}

@@ -1,0 +1,13 @@
+@use "../../global/" as *;
+
+.menu {
+    display: flex;
+    &__link {
+        &:not(:last-child) {
+            padding-right: 2rem;
+        }
+        &:hover {
+            color: $fc_hover;
+        }
+    }
+}

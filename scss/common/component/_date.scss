@@ -1,0 +1,23 @@
+.date {
+    & * {
+        display: inline-block;
+        font-weight: 800;
+        &:not(:last-child) {
+            padding-right: 1rem;
+        }
+    }
+    &__heading {
+        color: #FF7F66;
+        font-size: 1.5rem;
+    }
+    & *:not(&__heading) {
+        font-size: 1rem;
+    }
+    &__ymd {
+        color: gray;
+        letter-spacing: 0.125rem;
+    }
+    &__day {
+        color: #AF59CF;
+    }
+}
